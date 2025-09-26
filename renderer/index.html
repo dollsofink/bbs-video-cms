@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Video CMS Explorer</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' file: data:; media-src 'self' file: data:; script-src 'self';">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="left">
+        <button id="btn-add-root">+ Root</button>
+        <select id="root-select"></select>
+        <input id="search" type="search" placeholder="Search title, pornstars, tags, categories…" />
+      </div>
+      <div class="right">
+        <span class="badge" title="Hover-scrub enabled">🖱️🎞️</span>
+        <span class="badge">BB's Video CMS</span>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <h3>Folders</h3>
+        <ul id="folder-list"></ul>
+      </aside>
+      <main class="main">
+        <div id="grid" class="grid"></div>
+      </main>
+      <aside class="inspector">
+        <div class="player">
+          <video id="player" controls></video>
+          <div class="player-actions">
+            <button id="open-in-folder">Show in Folder</button>
+            <button id="open-externally">Open Externally</button>
+          </div>
+        </div>
+
+        <div class="meta-editor">
+          <h3>Metadata</h3>
+          <label>Title <input id="m-title" /></label>
+          <label>Description <textarea id="m-desc"></textarea></label>
+          <label>Pornstars (CSV) <input id="m-stars" placeholder="Name1, Name2" /></label>
+          <label>Director <input id="m-director" /></label>
+          <label>Release Date <input id="m-release" type="date"/></label>
+          <label>Recording Date <input id="m-recording" type="date"/></label>
+          <label>Tags/Keywords (CSV) <input id="m-tags" /></label>
+          <label>Categories (CSV) <input id="m-cats" /></label>
+          <label>Sex Rating
+            <select id="m-sexrating">
+              <option>non-nude</option>
+              <option>softcore</option>
+              <option>masturbation</option>
+              <option>hardcore XXX</option>
+            </select>
+          </label>
+          <label>Rating (0-5) <input id="m-rating" type="number" min="0" max="5" step="0.1"/></label>
+          <label>Asset Type
+            <select id="m-assettype">
+              <option>full</option>
+              <option>trailer</option>
+              <option>footage</option>
+            </select>
+          </label>
+          <div class="row">
+            <button id="btn-save-meta">Save Sidecars</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <template id="tpl-item">
+      <div class="item" draggable="false">
+        <div class="thumb" data-state="poster">
+          <canvas class="poster"></canvas>
+          <video class="hovervid" muted></video>
+          <div class="badge kind"></div>
+          <div class="badge len"></div>
+        </div>
+        <div class="meta">
+          <div class="name"></div>
+          <div class="tags"></div>
+        </div>
+      </div>
+    </template>
+
+    <menu id="context" type="context">
+      <button data-act="play">▶ Play</button>
+      <button data-act="edit">✎ Edit Metadata</button>
+      <hr/>
+      <button data-act="Transcode 1080p">Transcode 1080p</button>
+      <button data-act="Transcode 4K">Transcode 4K</button>
+      <button data-act="Transcode SD">Transcode SD</button>
+      <button data-act="Transcode Unwatermarked">Transcode Unwatermarked</button>
+      <button data-act="Upload to…">Upload to…</button>
+    </menu>
+
+    <script type="module" src="./app.js"></script>
+  </div>
+</body>
+</html>

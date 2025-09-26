@@ -1,0 +1,20 @@
+{
+  "roots": [
+    "C:\\Users\\Marshall\\Videos",
+    "C:\\Videos\\Mission 21 - CiCi Maker.net"
+  ],
+  "videoExtensions": [
+    ".mp4",
+    ".mkv",
+    ".mov",
+    ".webm",
+    ".m4v"
+  ],
+  "defaultActions": [
+    "Transcode 1080p",
+    "Transcode 4K",
+    "Transcode SD",
+    "Transcode Unwatermarked",
+    "Upload"
+  ]
+}

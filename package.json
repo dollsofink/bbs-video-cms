@@ -1,0 +1,17 @@
+{
+  "name": "video-cms-explorer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Electron video CMS with rollover scrubbing, XMP sidecars, and context actions",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "postinstall": "node ./scripts/postinstall.js || exit 0"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0"
+  },
+  "devDependencies": {
+    "electron": "^31.3.0"
+  }
+}
