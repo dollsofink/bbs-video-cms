@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Settings — BB's Video CMS</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      .settings{max-width:720px;margin:24px auto;padding:16px;border:1px solid #e5e5e5;border-radius:12px}
+      .field{margin:12px 0;display:flex;flex-direction:column}
+      label{font-weight:600;margin-bottom:6px}
+      input,textarea,select{padding:10px;border:1px solid #ccc;border-radius:8px}
+      .row{display:flex;gap:12px}
+      .row .field{flex:1}
+      .actions{display:flex;gap:12px;justify-content:flex-end;margin-top:12px}
+    </style>
+  </head>
+  <body>
+    <div class="settings">
+      <h2>AI Settings</h2>
+      <div class="field">
+        <label>OpenAI API Key</label>
+        <input id="apiKey" type="password" placeholder="sk-..." />
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>Model</label>
+          <select id="model">
+            <option value="gpt-4o-mini">gpt-4o-mini</option>
+            <option value="gpt-4o">gpt-4o</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label>Base Prompt (used as system/user instruction)</label>
+        <textarea id="basePrompt" rows="10" placeholder="Write the prompt to guide descriptions..."></textarea>
+      </div>
+      <div class="actions">
+        <button id="saveBtn">Save</button>
+      </div>
+    
+    <h2 style="margin-top:24px">Upload Settings</h2>
+    <div class="row">
+      <div class="field">
+        <label>Provider</label>
+        <select id="uploadProvider">
+          <option value="none">Disabled</option>
+          <option value="http-multipart">HTTP Multipart</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Upload URL</label>
+        <input id="uploadUrl" placeholder="https://api.example.com/upload" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>Auth Type</label>
+        <select id="uploadAuthType">
+          <option value="none">None</option>
+          <option value="bearer">Bearer Token</option>
+          <option value="apikey">x-api-key header</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Token / API Key</label>
+        <input id="uploadToken" placeholder="token or key" />
+      </div>
+    </div>
+    <div class="field">
+      <label><input type="checkbox" id="autoUpdateChk"> Enable auto-update checks</label>
+    </div>
+</div>
+<script src="./settings.js"></script>
+
+  </body>
+</html>

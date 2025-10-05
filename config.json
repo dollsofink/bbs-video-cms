@@ -1,7 +1,9 @@
 {
   "roots": [
+    "/home/sandbox/Videos",
     "C:\\Users\\Marshall\\Videos",
-    "C:\\Videos\\Mission 21 - CiCi Maker.net"
+    "C:\\Users\\Alex\\Videos",
+    "C:\\Videos\\XRecorder0"
   ],
   "videoExtensions": [
     ".mp4",
@@ -15,6 +17,6 @@
     "Transcode 4K",
     "Transcode SD",
     "Transcode Unwatermarked",
-    "Upload"
+    "Upload to…"
   ]
 }

@@ -48,3 +48,17 @@ menu#context { position: fixed; display: none; background: #0c1017; border: 1px 
 menu#context button { display: block; width: 220px; text-align: left; color: #d2d8e6; background: transparent; border: 0; padding: 8px 10px; cursor: pointer; font-size: 13px; }
 menu#context button:hover { background: #1a2130; }
 menu#context hr { border: none; border-top: 1px solid #273148; margin: 6px 0; }
+
+/** Fix overlay drag issues */
+/* Any draggable region (custom titlebar/toolbar) */
+.titlebar, .toolbar, .app-drag {
+  -webkit-app-region: drag;
+}
+/* All interactive controls MUST be no-drag */
+input, textarea, select, button, a, [role="button"], [contenteditable="true"], .no-drag, .webix_input, .webix_el_search {
+  -webkit-app-region: no-drag;
+}
+/* default: don’t block interactions */
+.scrub-overlay { pointer-events: none; }
+/* only enable when actively scrubbing that tile */
+.file:hover .scrub-overlay { pointer-events: auto; }
