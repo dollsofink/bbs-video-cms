@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Video CMS Explorer</title>
+  <title>BB's Video CMS</title>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' file: data:; media-src 'self' file: data:; script-src 'self';">
   <link rel="stylesheet" href="./styles.css" />
 </head>
@@ -16,7 +16,7 @@
       </div>
       <div class="right">
         <span class="badge" title="Hover-scrub enabled">🖱️🎞️</span>
-        <span class="badge">Video CMS Explorer</span>
+        <span class="badge">BB's Video CMS</span>
       </div>
     </header>
 
@@ -63,6 +63,12 @@
               <option>footage</option>
             </select>
           </label>
+          <label>Is Uploaded?
+            <select id="m-assettype">
+              <option>false</option>
+              <option>isUploaded</option>
+            </select>
+          </label>
           <div class="row">
             <button id="btn-save-meta">Save Sidecars</button>
           </div>
@@ -71,7 +77,7 @@
     </div>
 
     <template id="tpl-item">
-      <div class="item" draggable="false">
+      <div class="item" draggable="true">
         <div class="thumb" data-state="poster">
           <canvas class="poster"></canvas>
           <video class="hovervid" muted></video>
@@ -93,10 +99,13 @@
       <button data-act="Transcode 4K">Transcode 4K</button>
       <button data-act="Transcode SD">Transcode SD</button>
       <button data-act="Transcode Unwatermarked">Transcode Unwatermarked</button>
-      <button data-act="Upload to…">Upload to…</button>
+      <button data-act="Upload to...">Upload to...</button>
+      <hr/>
+      <button data-act="Delete" style="color:red;">Delete</button>
     </menu>
 
     <script type="module" src="./app.js"></script>
+    <script src="./lib/multiselect-dropdown.js"></script>
   </div>
 </body>
 </html>

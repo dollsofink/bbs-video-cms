@@ -1,7 +1,5 @@
 {
   "roots": [
-    "/home/sandbox/Videos",
-    "C:\\Users\\Marshall\\Videos",
     "C:\\Users\\Alex\\Videos",
     "C:\\Videos\\XRecorder0"
   ],
@@ -17,6 +15,6 @@
     "Transcode 4K",
     "Transcode SD",
     "Transcode Unwatermarked",
-    "Upload to…"
+    "Upload to..."
   ]
 }

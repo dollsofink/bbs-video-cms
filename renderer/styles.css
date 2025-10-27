@@ -31,6 +31,10 @@ body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-
 .item.full   { border-color: #aa1d1d; box-shadow: 0 0 0 1px #aa1d1d inset; }   /* red */
 .item.trailer{ border-color: #e3b341; box-shadow: 0 0 0 1px #e3b341 inset; }   /* yellow */
 .item.footage{ border-color: #555a66; box-shadow: 0 0 0 1px #555a66 inset; }   /* gray */
+.item.isUploaded {
+    border-color: #00ff00;
+    box-shadow: 0 0 0 1px #00ff00 inset;
+}
 
 .inspector { border-left: 1px solid #222; background: #0f131a; padding: 12px; overflow: auto; display: grid; grid-template-rows: 280px auto; gap: 12px; }
 .player { background: #0e1116; border: 1px solid #1e2230; border-radius: 12px; padding: 8px; display: grid; grid-template-rows: 1fr auto; }

@@ -1,6 +1,8 @@
 
 # Video CMS Explorer (Electron)
 
+Complete replacement for Windows Explorer or File Finder
+
 A file-level video CMS with **hover scrubbing**, **XMP/TXT sidecars**, **right‑click transcode/upload actions**, **color‑coded thumbnails** (full/trailer/footage), **search**, and a **built-in player**.
 
 ## Quick start

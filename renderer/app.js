@@ -1,6 +1,5 @@
-
 import { buildXmp, buildTxt } from './xmp.js';
-import { fmtLen, parseCsv, toCsv, deriveAssetClass, searchFilter, throttleRAF, parseXmp } from './utils.js';
+import { fmtLen, parseCsv, toCsv, deriveAssetClass, deriveIsUploadedClass, searchFilter, throttleRAF, parseXmp } from './utils.js';
 
 const d = (sel, el=document) => el.querySelector(sel);
 const all = (sel, el=document) => [...el.querySelectorAll(sel)];
@@ -111,7 +110,9 @@ function buildCard(item) {
   name.textContent = item.name;
   tags.textContent = (item.meta?.tags || []).slice(0, 5).join(', ');
   const assetClass = deriveAssetClass(item.meta || {});
+  const isUploadedClass = deriveIsUploadedClass(item.meta || {});
   el.classList.add(assetClass);
+  el.classList.add(isUploadedClass);
 
   // Kind badge text
   kind.textContent = assetClass;

@@ -28,6 +28,12 @@ export function deriveAssetClass(meta) {
   return 'full';
 }
 
+export function deriveIsUploadedClass(meta) {
+  const t = (meta.isUploaded || false);
+  if (t === true) return 'isUploaded';
+  return false;
+}
+
 export function searchFilter(q, item) {
   if (!q) return true;
   q = q.toLowerCase();
