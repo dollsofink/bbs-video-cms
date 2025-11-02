@@ -1,5 +1,5 @@
 
-# Video CMS Explorer (Electron)
+# BBS Video CMS (Electron)
 
 Complete replacement for Windows Explorer or File Finder
 
