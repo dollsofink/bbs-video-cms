@@ -3,17 +3,13 @@
 
 Complete replacement for Windows Explorer or File Finder
 
-A file-level video CMS with **hover scrubbing**, **XMP/TXT sidecars**, **right‑click transcode/upload actions**, **color‑coded thumbnails** (full/trailer/footage), **search**, and a **built-in player**.
+A file-level video CMS with **hover scrubbing**, **XMP/TXT sidecars**, **right‑click transcode/upload actions**, **color‑coded thumbnails** (full/trailer/footage), **search**, and a **built-in video player**.
 
-![BB's Video CMS]("./Screenshot 2025-12-11 214617.png")
 <p align="center"><img src="./Screenshot 2025-12-11 214617.png" width="100%" alt="BB's dB -- By Aiden V (aka DollsOfInk)" /></p>
 
 ## Quick start
-```bash
-npm install
-npm start
-```
-> If you plan to use the transcode actions, install `ffmpeg` and `ffprobe` and put them on your PATH or set `FFMPEG_PATH` and `FFPROBE_PATH` env vars.
+
+If you're on a Windows you can simply <b>run the boot.cmd</b> file, or **boot.sh** if you're on Mac.
 
 ## Installation
 
@@ -36,6 +32,14 @@ curl -o- https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | ba
 # Download and install Node.js:
 brew install node@24
 ```
+
+###### Manual Installation
+
+```bash
+npm install
+npm start
+```
+> If you plan to use the transcode actions, install `ffmpeg` and `ffprobe` and put them on your PATH or set `FFMPEG_PATH` and `FFPROBE_PATH` env vars.
 
 ## Features
 - File explorer rooted at folders from `config.json` → `"roots"`
