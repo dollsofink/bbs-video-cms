@@ -5,7 +5,8 @@ Complete replacement for Windows Explorer or File Finder
 
 A file-level video CMS with **hover scrubbing**, **XMP/TXT sidecars**, **right‑click transcode/upload actions**, **color‑coded thumbnails** (full/trailer/footage), **search**, and a **built-in player**.
 
-![BB's Video CMS](Screenshot 2025-12-11 214617.png)
+![BB's Video CMS]("./Screenshot 2025-12-11 214617.png")
+<p align="center"><img src="./Screenshot 2025-12-11 214617.png" width="100%" alt="BB's dB -- By Aiden V (aka DollsOfInk)" /></p>
 
 ## Quick start
 ```bash
@@ -13,6 +14,28 @@ npm install
 npm start
 ```
 > If you plan to use the transcode actions, install `ffmpeg` and `ffprobe` and put them on your PATH or set `FFMPEG_PATH` and `FFPROBE_PATH` env vars.
+
+## Installation
+
+1. <a href="https://nodejs.org/en/download">Install Node.js to your computer</a>
+2. Open CMD or Terminal on your PC
+3. Run Commands:
+
+```bash
+# Windows
+# Download and install Chocolatey:
+powershell -c "irm https://community.chocolatey.org/install.ps1|iex"
+# Download and install Node.js:
+choco install nodejs --version="24.12.0"
+```
+
+```bash
+# MacOS
+# Download and install Homebrew
+curl -o- https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
+# Download and install Node.js:
+brew install node@24
+```
 
 ## Features
 - File explorer rooted at folders from `config.json` → `"roots"`
