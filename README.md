@@ -5,6 +5,8 @@ Complete replacement for Windows Explorer or File Finder
 
 A file-level video CMS with **hover scrubbing**, **XMP/TXT sidecars**, **right‑click transcode/upload actions**, **color‑coded thumbnails** (full/trailer/footage), **search**, and a **built-in player**.
 
+![BB's Video CMS](Screenshot 2025-12-11 214617.png)
+
 ## Quick start
 ```bash
 npm install
